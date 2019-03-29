@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700');
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+body {
+  margin-bottom: 0px;
+  color: #5a5a5a;
+  font-family: 'Poppins',
+    sans-serif;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+/* Navbar logo style*/
+#homepage {
+  width: 110px;
+  height: 40px;
+}
+
+
+.jumbotron {
+  background-color: #212427;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.footerText {
+  color: #dcd6d6;
+}
+
+.div-style {
+  width: 450px;
+}
+
+.bg-dark {
+  background-color: #212427 !important;
+}
+
+.textATag {
+  color: inherit;
+}
+
+a:hover {
+  color: crimson;
+  text-decoration: underline;
+}
+
+.form-control:focus {
+  border-color: crimson !important;
+  box-shadow: 0 0 0 0.2rem #bd213082;
+}
+
+.nav-link:hover {
+  color: crimson !important;
+  text-decoration: none;
+
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal {
+  overflow-y: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.AboutMastHead {
+  background-size: cover;
+  background-image: url(https://i.annihil.us/u/prod/marvel/html_blocks_assets/loyalty/avengers.jpg);
+  height: 350px;
+  position: relative;
+}
+
+.AboutMastHead:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+
+.masthead_container {
+  margin: auto;
+  text-align: center;
+  padding: 50;
+}
+
+.masthead_caption {
+  font-size: 50px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+form {
+  margin-bottom: 0;
+}
+
+.h-100 {
+  height: 50% !important;
+}
+
+.characterHeight {
+  height: 40% !important;
+}
+
+.dropdown-menu {
+  right: 0 !important;
+  left: auto !important;
+}
+
+#favCount {
+  position: relative;
+  /* position: absolute; */
+  display: none;
+  /* top: 8px;
+  right: 189px; */
+  top: -20px;
+  right: -30px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background: crimson;
+  color: white;
+  text-align: center;
+}
+
+#itemCount {
+  position: relative;
+  /* position: absolute; */
+  display: none;
+  /* top: 8px;
+  right: 189px; */
+  top: -20px;
+  right: -30px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background: crimson;
+  color: white;
+  text-align: center;
+}
+
+
+.popup {
+  transition: transform .2s;
+}
+
+.popup:hover {
+  transform: scale(1.1);
+}
+
+.shadow {
+  /* padding: 10px; */
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.spacing {
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+/* Since positioning the image, help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+
+.carousel-item>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing h2 {
+  font-weight: 400;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+
+  .lead {
+    font-weight: 200;
+  }
+}
+
+.comic-container {
+  min-height: 250px !important;
+}
+
+.loader-margin {
+  margin-top: 4%;
+}

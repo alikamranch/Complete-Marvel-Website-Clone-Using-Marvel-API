@@ -1,0 +1,48 @@
+<?php
+error_reporting(0);
+require_once('connection.php');
+
+session_start();
+
+if (isset($_POST["userData"])) {
+    $userData = json_decode($_POST["userData"]);
+    $username = $userData->username;
+    $q = "select id from user where username='$username'";
+    $result = mysqli_query($connect, $q);
+    $useridn = mysqli_fetch_array($result);
+    //final id
+    $id = $useridn['id'];
+    // $itemid = $userData->itemid;
+    // $price = $userData->price;
+    // $title = $userData->title;
+    // $quantity = $userData->quantity;
+    // $date = $userData->created_date;
+
+    $query = "  
+    SELECT price FROM cart WHERE userid='" . $id . "'";
+
+    $result2 = mysqli_query($connect, $query);
+    // $row = mysqli_fetch_object($result2);
+
+
+    $resultids = array();
+
+    $query2 = "  
+    SELECT quantity FROM cart WHERE userid='" . $id . "'";
+
+    $result3 = mysqli_query($connect, $query2);
+
+    $i = 0;
+    while ($row = mysqli_fetch_object($result2)) {
+        $resultids[$i] = $row->price;
+        $i++;
+    }
+
+    $j = 0;
+    while ($row2 = mysqli_fetch_object($result3)) {
+        $resultids[$j] = $resultids[$j] * $row2->quantity;
+        $j++;
+    }
+
+    echo json_encode($resultids);
+}
